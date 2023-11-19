@@ -1,0 +1,15 @@
+﻿
+/*slider-banner1*/
+
+#banner1 {
+    background-color: #503629;
+    height: 30px;
+    width: 100%;
+    overflow: hidden
+}
+
+#text-p {
+    text-align: center;
+    color: white;
+    padding-top: 3px;
+}

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HomePage.cshtml";
+}
+
+<!-- link slide -->
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider-extensions.min.js" rel="stylesheet" />
+
+<div class="swiffy-slider slider-nav-nodelay slider-nav-autoplay slider-indicators-round slider-indicators-highlight slider-nav-animation-fadein" data-slider-nav-autoplay-interval="3000">
+    <ul class="slider-container">
+        <li>
+            <div id="slide1">
+                <img src="~/Content/images/HomePage_Slide1.jpg" alt="Higland" style="width:100%; height:100%;" data-slider-nav-autoplay-interval="1000">
+            </div>
+        </li>
+        <li>
+            <div id="slide2">
+                <img src="~/Content/images/HomePage_Slide2.jpg" alt="Higland" style="width:100%;" data-slider-nav-autoplay-interval="1000">
+            </div>
+        </li>
+        <li>
+            <div id="slide3">
+                <img src="~/Content/images/HomePage_Slide3.jpg" alt="Higland" style="width:100%;" data-slider-nav-autoplay-interval="1000">
+            </div>
+        </li>
+        <li>
+            <div id="slide4">
+                <img src="~/Content/images/HomePage_Slide4.jpg" alt="Higland" style="width:100%;" data-slider-nav-autoplay-interval="1000">
+            </div>
+        </li>
+    </ul>
+
+    <ul class="slider-indicators">
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class="active"></li>
+    </ul>
+</div>
+
+<div>
+    <img src="~/Content/images/HomePage_Banner1.jpg" alt="Banner1" style="width:100%;">
+</div>
+
+<div>
+    <img src="~/Content/images/HomePage_Banner2.jpg" alt="Banner2" style="width:100%;">
+</div>
