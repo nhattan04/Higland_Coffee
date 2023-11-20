@@ -67,27 +67,27 @@
 <div class="container awe-section-5">
 
     <div style="text-align:center">
-        <a class="sport-titles" href="#" title="Sản phẩm bán chạy!" style="width:790px; padding: 5px 15px 5px; font-size:24px; color: white; background-color: red; border-radius:50px; display:inline-block; margin-bottom:10px;vertical-align: central">@Html.DisplayFor(model => pro.NameCate)</a>
+        <a class="sport-titles" href="#" style="width: 790px; padding: 5px 15px 5px; font-size: 24px; color: white; background-color: #B5313A; border-radius: 50px; display: inline-block; margin-bottom: 20px; margin-top: 20px; vertical-align: central">@Html.DisplayFor(model => pro.NameCate)</a>
     </div>
     <div class="swiffy-slider slider-item-show5">
         <ul class="slider-container">
             @foreach (var product in pro.Products)
             {
-                <li class="slide-visible" style="margin-left: 10px; width: 210px; height: 383px; display:inline-block;">
+                <li class="slide-visible" style="margin-left: 10px; width: 210px; height: 390px; display: inline-block; overflow:hidden; margin-top:20px">
                     <div id="slide1">
                         <div class="card border-0">
                             <div class="evo-product-new">
 
-                                <a href="/tang-tui-highlands-coffee-ca-phe-bot-truyen-thong-highlands-coffee-1kg" class="evo-image-pro product-item-photo" title="[TẶNG TÚI HIGHLANDS COFFEE-màu ngẫu nhiên] Cà Phê Bột Truyền Thống Highlands Coffee 1KG" tabindex="0">
-                                    <img src="@Url.Content(product.imageProduct1)" alt="[TẶNG TÚI HIGHLANDS COFFEE-màu ngẫu nhiên] Cà Phê Bột Truyền Thống Highlands Coffee 1KG" width="208" height="208">
+                                <a href="#" class="evo-image-pro product-item-photo" title="[TẶNG TÚI HIGHLANDS COFFEE-màu ngẫu nhiên] Cà Phê Bột Truyền Thống Highlands Coffee 1KG" tabindex="0">
+                                    <img src="@Url.Content(product.imageProduct1)" alt="[TẶNG TÚI HIGHLANDS COFFEE-màu ngẫu nhiên] Cà Phê Bột Truyền Thống Highlands Coffee 1KG" width="210" height="208">
                                 </a>
 
-                                <span class="sale"> 41% </span>
+                                <span class="sale"> @Html.DisplayFor(model=>product.Discount)%</span>
 
-                                <a href="/tang-tui-highlands-coffee-ca-phe-bot-truyen-thong-highlands-coffee-1kg" title="[TẶNG TÚI HIGHLANDS COFFEE-màu ngẫu nhiên] Cà Phê Bột Truyền Thống Highlands Coffee 1KG" class="title" tabindex="0">@Html.DisplayFor(model => product.NameProduct)</a>
+                                <a href="#" title="[TẶNG TÚI HIGHLANDS COFFEE-màu ngẫu nhiên] Cà Phê Bột Truyền Thống Highlands Coffee 1KG" class="title" tabindex="0">@Html.DisplayFor(model => product.NameProduct)</a>
 
                                 <div class="price-box">
-                                    <span class="price">@Html.DisplayFor(model => product.PriceProduct)</span>
+                                    <span class="price">@Html.DisplayFor(model => product.PriceProduct).000₫</span>
                                     <span class="old-price">504.000₫</span>
                                 </div>
 

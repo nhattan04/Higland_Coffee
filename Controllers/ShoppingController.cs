@@ -16,6 +16,12 @@ namespace Highland.Controllers
             var list = database.Categories.ToList();
             ViewBag.ListStyle = list;
             return PartialView(list);
-        }       
+        }
+        
+        public ActionResult Detail(int id)
+        {
+            var objProduct = database.Products.Where(s => s.ID == id).FirstOrDefault();
+            return View(objProduct);
+        }
     }
 }

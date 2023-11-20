@@ -128,7 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CheckOutController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -179,6 +179,31 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CheckOut.css" />
     <Content Include="Content\HomePage.css" />
+    <Content Include="Content\imagesProduct\cfhat17.jpg" />
+    <Content Include="Content\imagesProduct\cfhoatan18.jpg" />
+    <Content Include="Content\imagesProduct\cfhoatan19.jpg" />
+    <Content Include="Content\imagesProduct\cfhoatan20.jpg" />
+    <Content Include="Content\imagesProduct\cfhopgiay25.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay1.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay10.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay11.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay12.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay13.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay14.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay15.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay16.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay2.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay3.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay5.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay6.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay7.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay8.jpg" />
+    <Content Include="Content\imagesProduct\cfrangsay9.jpg" />
+    <Content Include="Content\imagesProduct\cfuonglien21.jpg" />
+    <Content Include="Content\imagesProduct\cfuonglien22.jpg" />
+    <Content Include="Content\imagesProduct\cfuonglien23.jpg" />
+    <Content Include="Content\imagesProduct\cfuonglien24.jpg" />
     <Content Include="Content\images\HomePage_Banner1.jpg" />
     <Content Include="Content\images\HomePage_Banner2.jpg" />
     <Content Include="Content\images\HomePage_Slide1.jpg" />
@@ -245,8 +270,8 @@
     <Content Include="Views\ShoppingCart\CheckOut_Success.cshtml" />
     <Content Include="Views\ShoppingCart\ShowCart.cshtml" />
     <Content Include="Views\Shared\_BuyCart.cshtml" />
-    <Content Include="Views\CheckOut\CheckOut.cshtml" />
-    <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
+    <Content Include="Views\Shopping\Detail.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

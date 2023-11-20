@@ -109,55 +109,38 @@ namespace Highland.Controllers
         //    }
         //}
 
-        
-
-        [HttpGet]
-        public ActionResult CheckOut()
-        {
-            var cart = Session["Cart"];
-            var list = new List<CartItem>();
-            if (cart != null)
-            {
-                list = (List<CartItem>)cart;
-            }
-            return View(list);
-        }
-
-        [HttpPost]
         public ActionResult CheckOut(FormCollection form)
         {
             try
             {
                 Cart cart = Session["Cart"] as Cart;
-                OrderPro _order = new OrderPro(); //bang hóa đơn sản phẩm
+                OrderPro _order = new OrderPro();
                 _order.DateOrder = DateTime.Now;
-                _order.AddressCus = form["AddressDelivery"];
-                _order.IDCus = int.Parse(form["CodeCustomer"]);
-                _order.Customer.NameCus = (form["NameCustomer"]);
-                _order.Customer.PhoneCus = (form["PhoneCustomer"]);
-                _order.Customer.EmailCus = (form["EmailCustomer"]);
-
+                //_order.Customer.NameCus = (form["NameCustomer"]);
+                _order.AddressCus = (form["AddressCustomer"]);
+                _order.IDCus= int.Parse(form["IDCustomer"]);
+                //_order.Customer.PhoneCus = (form["PhoneNumber"]);
                 database.OrderProes.Add(_order);
-                foreach (var item in cart.Items)
+
+                foreach(var item in cart.Items)
                 {
-                    OrderDetail _order_detail = new OrderDetail();//luu dòng sản phẩm vào chi tiết hóa đơn
-                    _order_detail.IDOrder = _order.ID;
-                    _order_detail.IDProduct = item._product.ID;
-                    _order_detail.Quantity = item._quantity;
-                    database.OrderDetails.Add(_order_detail);
+                    OrderDetail _order_Detail = new OrderDetail();
+                    _order_Detail.IDOrder = _order.ID; //lấy id trong order lưu vào order Detail
+                    _order_Detail.IDProduct = item._product.ID;
+                    _order_Detail.Quantity = item._quantity;
+                    database.OrderDetails.Add(_order_Detail);
                 }
+
                 database.SaveChanges();
                 cart.ClearCart();
                 return RedirectToAction("CheckOut_Success", "ShoppingCart");
             }
             catch
             {
-                return Content("Error checkout. Please check information of Customer...Thanks.");
-
+                return Content("Error CheckOut");
             }
         }
-
-
+        
         public ActionResult CheckOut_Success()
         {
             return View();
