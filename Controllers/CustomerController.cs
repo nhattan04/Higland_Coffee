@@ -19,9 +19,25 @@ namespace Highland.Controllers
         [HttpPost]
         public ActionResult Create( Customer cus)
         {
-            database.Customers.Add(cus);
-            database.SaveChanges();
-            return RedirectToAction("ShowCart", "ShoppingCart");
+
+            try
+            {
+                database.Configuration.ValidateOnSaveEnabled = false;
+                database.Customers.Add(cus);
+                database.SaveChanges();
+                int cusID = cus.ID;
+                Session["IDCus"] = cusID;
+                return RedirectToAction("ShowCart", "ShoppingCart");
+            }
+            catch
+            {
+                return Content("Error with saving data.");
+            }
         }
+        public ActionResult CustomerList()
+        {
+            var cus = database.Customers.ToList();
+            return View(cus);
+        }  
     }
 }

@@ -1,0 +1,37 @@
+﻿@model Highland.Models.AdminUser
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Shopping.cshtml";
+}
+
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+@using (Html.BeginForm("LoginAccount", "Login"))
+{
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.UserName) </td>
+            <td>@Html.TextBoxFor(model => model.UserName, new { style = "field-validation-error" }) </td>
+            <td>@Html.ValidationMessageFor(model => model.UserName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.UserPass)</td>
+            <td>@Html.EditorFor(model => model.UserPass)</td>
+            <td>@Html.ValidationMessageFor(model => model.UserPass)</td>
+            @if (ViewBag.ErrorInfo != null)
+            {
+                <p>@ViewBag.ErrorInfo</p>
+            }
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" value="Login" /> </td>
+        </tr>
+    </table>
+}
+

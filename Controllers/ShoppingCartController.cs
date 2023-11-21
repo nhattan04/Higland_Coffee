@@ -108,18 +108,41 @@ namespace Highland.Controllers
         //        return Content("Error checkout. Please check infomation of Customer...Thanks");
         //    }
         //}
+        public ActionResult CheckOutForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CheckOutForm(Customer cus)
+        {
+            try
+            {
+                database.Configuration.ValidateOnSaveEnabled = false;
+                database.Customers.Add(cus);
+                database.SaveChanges();
+                int cusID = cus.ID;
+                Session["IDCus"] = cusID;
+                return RedirectToAction("CheckOut", "ShoppingCart", new { cusID = cusID });
+            }
+            catch
+            {
+                return Content("Error with saving data.");
+            }
+        }
 
-        public ActionResult CheckOut(FormCollection form)
+
+        public ActionResult CheckOut(int cusID)
         {
             try
             {
                 Cart cart = Session["Cart"] as Cart;
+                var cus = database.Customers.Where(s => s.ID == cusID).FirstOrDefault();
                 OrderPro _order = new OrderPro();
                 _order.DateOrder = DateTime.Now;
-                //_order.Customer.NameCus = (form["NameCustomer"]);
-                _order.AddressCus = (form["AddressCustomer"]);
-                _order.IDCus= int.Parse(form["IDCustomer"]);
-                //_order.Customer.PhoneCus = (form["PhoneNumber"]);
+                _order.AddressCus = cus.AddressCus;
+                _order.IDCus = cus.ID;
+                _order.DeliveryInfor = cus.PhoneCus;
+                
                 database.OrderProes.Add(_order);
 
                 foreach(var item in cart.Items)

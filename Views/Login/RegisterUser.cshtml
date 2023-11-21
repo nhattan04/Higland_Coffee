@@ -1,0 +1,34 @@
+﻿@model Highland.Models.AdminUser
+
+@{
+    ViewBag.Title = "RegisterUser";
+    Layout = "~/Views/Shared/_Shopping.cshtml";
+}
+
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+<h2>RegisterUser</h2>
+@using (Html.BeginForm("RegisterUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <p>@Html.LabelFor(model => model.UserName)</p>
+    <p>@Html.EditorFor(model => model.UserName)</p>
+    <p>@Html.ValidationMessageFor(model => model.UserName)</p>
+
+    <p>@Html.LabelFor(model => model.EmailUser)</p>
+    <p>@Html.EditorFor(model => model.EmailUser)</p>
+    <p>@Html.ValidationMessageFor(model => model.EmailUser)</p>
+
+    <p>@Html.LabelFor(model => model.UserPass)</p>
+    <p>@Html.EditorFor(model => model.UserPass)</p>
+    <p>@Html.ValidationMessageFor(model => model.UserPass)</p>
+
+    <p>@Html.LabelFor(model => model.ConfirmPass)</p>
+    <p>@Html.EditorFor(model => model.ConfirmPass)</p>
+    <p>@Html.ValidationMessageFor(model => model.ConfirmPass)</p>
+    <input type="submit" value="Register" />
+}
