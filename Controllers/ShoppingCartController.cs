@@ -72,42 +72,6 @@ namespace Highland.Controllers
             return PartialView("BagCart");
         }
 
-        //Xử lý số lượng tồn trong bảng Product
-        //public ActionResult CheckOut(FormCollection form)
-        //{
-        //    try
-        //    {
-        //        Cart cart = Session["Cart"] as Cart;
-        //        OrderPro _order = new OrderPro(); //Bảng hóa đơn sản phẩm
-        //        _order.DateOrder = DateTime.Now;
-        //        _order.AddressDelivery = form["AddressDelivery"];
-        //        _order.IDCus = int.Parse(form["CodeCustomer"]);
-        //        database.OrderProes.Add(_order);
-        //        foreach (var item in cart.Items)
-        //        {
-        //            OrderDetail _order_detail = new OrderDetail(); //Lưu dòng sản phẩm vào bảng chi tiết hóa đơn
-        //            _order_detail.IDOrder = _order.IDOrder;
-        //            _order_detail.IDProduct = item._product.IDProduct;
-        //            _order_detail.UnitPrice = (double)item._product.PriceProduct;
-        //            _order_detail.Quantity = item._quantity;
-        //            database.OrderDetails.Add(_order_detail);
-
-        //            //xử lý cập nhập lại số lượng tồn trong bảng Product
-        //            foreach (var p in database.Products.Where(s => s.IDProduct == _order_detail.IDProduct)) //Lấy ID Product đang có trong giỏ hàng
-        //            {
-        //                var update_quan_pro = p.QuantityProduct - item._quantity; //số lượng tồn mới=số lượng tồn-số lượng đã mua
-        //                p.QuantityProduct = update_quan_pro; //thực hiện cập nhập lại số lượng tồn cho cột Quantity của bảng Product
-        //            }
-        //        }
-        //        database.SaveChanges();
-        //        cart.ClearCart();
-        //        return RedirectToAction("CheckOut_Success", "ShoppingCart");
-        //    }
-        //    catch
-        //    {
-        //        return Content("Error checkout. Please check infomation of Customer...Thanks");
-        //    }
-        //}
         public ActionResult CheckOutForm()
         {
             return View();
@@ -129,8 +93,6 @@ namespace Highland.Controllers
                 return Content("Error with saving data.");
             }
         }
-
-
         public ActionResult CheckOut(int cusID)
         {
             try

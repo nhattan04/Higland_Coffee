@@ -10,25 +10,29 @@
         color: red;
     }
 </style>
-<h2>RegisterUser</h2>
+<h2 style="margin-left:200px">RegisterUser</h2>
 @using (Html.BeginForm("RegisterUser", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
-    <p>@Html.LabelFor(model => model.UserName)</p>
-    <p>@Html.EditorFor(model => model.UserName)</p>
-    <p>@Html.ValidationMessageFor(model => model.UserName)</p>
+    <div style="margin-left:200px">
+        <p>@Html.LabelFor(model => model.UserName)</p>
+        <p>@Html.EditorFor(model => model.UserName)</p>
+        <p>@Html.ValidationMessageFor(model => model.UserName)</p>
 
-    <p>@Html.LabelFor(model => model.EmailUser)</p>
-    <p>@Html.EditorFor(model => model.EmailUser)</p>
-    <p>@Html.ValidationMessageFor(model => model.EmailUser)</p>
+        <p>@Html.LabelFor(model => model.EmailUser)</p>
+        <p>@Html.EditorFor(model => model.EmailUser)</p>
+        <p>@Html.ValidationMessageFor(model => model.EmailUser)</p>
 
-    <p>@Html.LabelFor(model => model.UserPass)</p>
-    <p>@Html.EditorFor(model => model.UserPass)</p>
-    <p>@Html.ValidationMessageFor(model => model.UserPass)</p>
+        <p>@Html.LabelFor(model => model.UserPass)</p>
+        <p>@Html.EditorFor(model => model.UserPass)</p>
+        <p>@Html.ValidationMessageFor(model => model.UserPass)</p>
 
-    <p>@Html.LabelFor(model => model.ConfirmPass)</p>
-    <p>@Html.EditorFor(model => model.ConfirmPass)</p>
-    <p>@Html.ValidationMessageFor(model => model.ConfirmPass)</p>
-    <input type="submit" value="Register" />
+        <p>@Html.LabelFor(model => model.ConfirmPass)</p>
+        <p>@Html.EditorFor(model => model.ConfirmPass)</p>
+        <p>@Html.ValidationMessageFor(model => model.ConfirmPass)</p>
+        <input type="submit" value="Register" />
+    </div>
+
+    
 }

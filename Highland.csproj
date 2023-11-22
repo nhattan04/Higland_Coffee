@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -263,17 +264,20 @@
     <Content Include="Views\Shared\_HomePage.cshtml" />
     <Content Include="Views\Shared\_Shopping.cshtml" />
     <Content Include="Views\HomePage\Index.cshtml" />
-    <Content Include="Views\HomePage\ThucDon.cshtml" />
     <Content Include="Views\Shopping\Index.cshtml" />
     <Content Include="Views\ShoppingCart\BagCart.cshtml" />
     <Content Include="Views\ShoppingCart\EmptyCart.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut_Success.cshtml" />
-    <Content Include="Views\Shopping\Detail.cshtml" />
     <Content Include="Views\Login\RegisterUser.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\ShoppingCart\ShowCart.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOutForm.cshtml" />
     <Content Include="Views\Customer\CustomerList.cshtml" />
+    <Content Include="Views\Admin\ShowListPro.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

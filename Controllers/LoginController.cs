@@ -64,7 +64,7 @@ namespace Login.Controllers
         public ActionResult LogOutUser()
         {
             Session.Abandon();
-            return RedirectToAction("Index", "LoginUser");
+            return RedirectToAction("Index", "Login");
         }
     }
 }

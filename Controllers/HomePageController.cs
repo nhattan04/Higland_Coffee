@@ -13,34 +13,5 @@ namespace Highland.Controllers
         {
             return View();
         }
-
-        public ActionResult QuanCaPhe()
-        {
-            return View();
-        }
-        public ActionResult ThucDon()
-        {
-            return View();
-        }
-        public ActionResult TinTuc()
-        {
-            return View();
-        }
-        public ActionResult CongDong()
-        {
-            return View();
-        }
-        public ActionResult VeChungToi()
-        {
-            return View();
-        }
-        public ActionResult NgheNghiep()
-        {
-            return View();
-        }
-        public ActionResult MuaNgay()
-        {
-            return View();
-        }
     }
 }

@@ -5,13 +5,17 @@
     Layout = "~/Views/Shared/_Shopping.cshtml";
 }
 
-<h2>CheckOutForm</h2>
+<style>
+    .form-control1{
+        width: 100%;
+    }
+</style>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+    <div class="form-horizontal" style="margin-left:250px">
         <h4>Customer</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -47,15 +51,16 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+        <div class="col">
+            <div class="col">
+                <input  style="margin-right:10px" type="submit" value="Create" class="btn btn-success" />
+                <button class="btn btn-warning" style="text-decoration:none;  ">
+                    @Html.ActionLink("Back to List", "ShowCart")
+                </button>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 

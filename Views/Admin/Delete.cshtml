@@ -1,0 +1,101 @@
+﻿@model Highland.Models.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IDCate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IDCate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NameProduct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NameProduct)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TradeMark)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TradeMark)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.QuantityProduct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.QuantityProduct)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PriceProduct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PriceProduct)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Discount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Discount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DescriptionProduct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DescriptionProduct)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.imageProduct1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.imageProduct1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.imageProduct2)
+            </dt>
+               
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "ShowListPro")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -10,7 +10,6 @@
 
     <!-- link higland -->
     <link href="https://www.highlandscoffee.com.vn/js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="https://www.highlandscoffee.com.vn/skins/default/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://www.highlandscoffee.com.vn/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
     <link href="https://www.highlandscoffee.com.vn/js/jquery_alerts/jquery.alerts.css" rel="stylesheet" type="text/css">
     <link href="https://www.highlandscoffee.com.vn/js/slick/slick.css" type="text/css" rel="stylesheet">
@@ -35,13 +34,13 @@
             <!-- header -->
             <div id="vnt-header">
                 <div class="wrapper">
-                    <div class="logo">
-                        <a onmousedown="return rwt(this,'advertise',131)" href="" target="_blank" title="">
-                            <a href="~/Views/HomePage/Index.cshtml"><img src="~/Content/images/Logo.png" alt="Logo"></a>
-                            
-                        </a>
+                    <div class="logo">                      
+                        <a href="~/Views/HomePage/Index.cshtml">
+                            <img src="~/Content/images/Logo.png" alt="Logo">
+                        </a>                           
                     </div>
 
+                    @*thanh search/ thanh language*@
                     <div class="header-tool">
                         <div class="rowTools">
                             <div class="searchTop hidden-sm hiđen-xs">
@@ -64,108 +63,23 @@
                             </div>
                         </div>
 
+                        @*thanh menu*@
                         <div class="menuTop hidden-sm hidden-xs">
                             <ul>
-                                <li class="menu-list"><a href="#" target="_self" class="text">QUÁN CÀ PHÊ</a></li>
+                                <li class="menu-list">
+                                <a>QUÁN CÀ PHÊ</a></li>
 
                                 <li>
-                                    <a href="~/Views/HomePage/ThucDon.cshtml" target="_self"><span>THỰC ĐƠN</span></a>
-                                    <div class="menuMega">
-                                        <div class="wrapper">
-                                            <div class="grid">
-                                                <div class="col1">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#">CÀ PHÊ</a>
-                                                            <ul>
-                                                                <li><a href="#">Cà Phê Phin</a></li>
-                                                                <li><a href="#">PhinDi</a></li>
-                                                                <li><a href="#">Cà Phê Espresso</a></li>
-                                                            </ul>
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="#">FREEZE</a>
-                                                            <ul>
-                                                                <li><a href="#">Freeze Cà Phê Phin</a></li>
-                                                                <li><a href="#">Freeze Không Cà Phê</a></li>
-                                                            </ul>
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="#">TRÀ</a>
-                                                            <ul>
-                                                                <li><a href="#">Trà Sen vàng Mới</a></li>
-                                                                <li><a href="#">Trà Thạch Đào</a></li>
-                                                                <li><a href="#">Trà Thanh Đào</a></li>
-                                                                <li><a href="#">Trà Vải</a></li>
-                                                                <li><a href="#">Trà Nhiệt Đới</a></li>
-                                                            </ul>
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="#">KHÁC</a>
-                                                            <ul>
-                                                                <li><a href="#">Bánh Ngọt</a></li>
-                                                                <li><a href="#">Merchandise</a></li>
-                                                                <li><a href="#">Cà Phê Đóng Gói</a></li>
-                                                                <li><a href="#">Thực Đơn Giao Hàng</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="col2">
-                                                    <div class="bannerMenu">
-                                                        <div class="txt">
-                                                            <a href="#">Phin Sữa Đá Đậm Đà Chất Phin! 29.000đ</a>
-                                                        </div>
-                                                        <div class="img">
-                                                            <a href="#">
-                                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/BrandFresh/Product/PHIN_SUA_DA_5.1.png" alt="Phin Sữa Đá Đậm Đà Chất Phin! 29.000đ">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a><span>THỰC ĐƠN</span></a>
+                                    
                                 </li>
 
-                                <li class="menu-list"><a href="#" target="_self"><span>TIN TỨC</span></a></li>
+                                <li class="menu-list"><a><span>TIN TỨC</span></a></li>
 
-                                <li class="menu-list"><a href="#" target="_self"><span>CỘNG ĐỒNG</span></a></li>
+                                <li class="menu-list"><a><span>CỘNG ĐỒNG</span></a></li>
+                               
 
-                                <li class="menu-mega">
-                                    <a href="#" target="_self"><span>VỀ CHÚNG TÔI</span></a>
-                                    <div class="menuMega">
-                                        <div class="wrapper">
-                                            <div class="gird">
-                                                <div class="col1">
-                                                    <ul>
-                                                        <li><a href="#">NGUỒN GỐC</a></li>
-                                                        <li><a href="#">DỊCH VỤ</a></li>
-                                                        <li><a href="#">NGHỀ NGHIỆP</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="bannerMenu">
-                                                        <div class="txt">
-                                                            <a href="#">Thương hiệu bắt nguồn từ cà phê Việt!</a>
-                                                        </div>
-                                                        <div class="img">
-                                                            <a href="#">
-                                                                <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/ABOUT-ORIGIN.png" alt="Thương hiệu bắt nguồn từ cà phê Việt!">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="menu-list"><a href="#" target="_blank"><span>NGHỀ NGHIỆP</span></a></li>
+                                <li class="menu-list"><a><span>NGHỀ NGHIỆP</span></a></li>
 
                                 <li class="menu-list"><a href="https://localhost:44355/Shopping/Index" target="_blank"><span>MUA NGAY</span></a></li>
                             </ul>
@@ -186,23 +100,17 @@
                     <div class="vnt-button hidden-lg hidden-md">
                         <div class="button-wrap">
                             <div class="buttons">
-                                <a href="tel:(028) 2.448.907" class="btn-mm"><span class="fa-phone">Call now</span></a>
+                                <a href="tel:(028) 2.448.907" class="btn-mm">
+                                <span >Call now</span>
+                                </a>
                             </div>
                             <div class="buttons">
                                 <a href="https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html" class="btn-mm"><span class="fa-map-marker">VIEW MAP</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="socialFoot">
-                        <ul>
-                            <li><a href="https://www.facebook.com/highlandscoffeevietnam/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCHEqa2uTf8uXrGWrnU3ThgA" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="https://www.instagram.com/highlandscoffeevietnam/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
+                    
                     <div class="copyRight">© 2018 Highlands Coffee. All rights reserved</div>
-                    <div class="linkFooter"><a href="javascript:void(0)" onclick="popupMaillist()"><span class="fa-paper-plane-o">Đăng ký để nhận bản tin</span></a></div>
-                    <div class="linkFooter mb"><a href="mailto:customerservice@highlandscoffee.com.vn"><span class="fa-envelope-o">customerservice@highlandscoffee.com.vn</span></a></div>
                 </div>
             </div>
         </div>

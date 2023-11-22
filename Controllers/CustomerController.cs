@@ -10,30 +10,7 @@ namespace Highland.Controllers
     public class CustomerController : Controller
     {
         DBQLHiglandEntities database = new DBQLHiglandEntities();
-        // GET: Customer
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Create( Customer cus)
-        {
-
-            try
-            {
-                database.Configuration.ValidateOnSaveEnabled = false;
-                database.Customers.Add(cus);
-                database.SaveChanges();
-                int cusID = cus.ID;
-                Session["IDCus"] = cusID;
-                return RedirectToAction("ShowCart", "ShoppingCart");
-            }
-            catch
-            {
-                return Content("Error with saving data.");
-            }
-        }
+        // GET: Customer    
         public ActionResult CustomerList()
         {
             var cus = database.Customers.ToList();

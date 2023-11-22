@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Highland.Models.Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowListPro</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IDCate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TradeMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescriptionProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imageProduct1)
+            </th>
+            
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDCate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TradeMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescriptionProduct)
+            </td>
+            <td>
+                <img src="@Url.Content(item.imageProduct1)" height="150"/>
+            </td>
+            
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
